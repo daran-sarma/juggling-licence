@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block page_title %}
+  Question page
+{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+  <form class="form" action="/check-your-answers-page" method="post">
+  <div class="form-group">
+      <div class="form-group">
+      </div>
+      <h1 class="heading-large">How many juggling shows have you done?
+      </h1>
+
+  <select class="form-control" id="select-box" name="juggling-shows">
+
+    <option{% if data['juggling-shows'] == 'None' %} selected{% endif %}>None</option>
+    <option{% if data['juggling-shows'] == 'One to Five' %} selected{% endif %}>One to Five</option>
+    <option{% if data['juggling-shows'] == 'Five or More' %} selected{% endif %}>Five or More</option>
+  </select>
+</div>
+<div class="form-group">
+  <input class="button" type="submit" value="Continue">
+</form)
+</div>
+</main>
+
+{% endblock %}
